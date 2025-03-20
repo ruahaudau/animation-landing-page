@@ -1,81 +1,73 @@
-# Animation Landing Page
+# Design Tool Agent Landing Page
 
-A modern, animated landing page built with HTML, CSS, and anime.js. This project showcases various animation techniques and modern design principles.
+A modern, animated landing page showcasing design tool capabilities using Anime.js.
 
-## Features
+## Live Demo
 
-- Smooth entrance animations
-- Interactive design elements
-- Responsive layout
-- Modern UI with gradient accents
-- Dynamic grid animations
-- Hover effects
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- [anime.js](https://animejs.com/) - JavaScript animation library
-
-## Getting Started
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ruahaudau/animation-landing-page.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd animation-landing-page
-```
-
-3. Start a local server (you can use Python's built-in server):
-```bash
-python -m http.server 8000
-```
-
-4. Open your browser and visit:
-```
-http://localhost:8000
-```
-
-## Deployment
-
-### Deploying to Vercel
-
-1. Install Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-2. Login to Vercel:
-```bash
-vercel login
-```
-
-3. Deploy the project:
-```bash
-vercel
-```
-
-The project is configured to be deployed on Vercel using the following structure:
-- `public/` - Contains all static files
-- `public/index.html` - Main landing page
-- `public/lib/` - Contains the anime.js library
-- `vercel.json` - Vercel deployment configuration
+Visit the live site: [Design Tool Agent](https://landingpage-ruahaudau.vercel.app/)
 
 ## Project Structure
 
-- `public/index.html` - Main landing page
-- `public/lib/` - Contains the anime.js library
-- `README.md` - Project documentation
-- `vercel.json` - Deployment configuration
+```
+anime/
+├── public/              # Static files for deployment
+│   ├── index.html      # Main landing page
+│   └── lib/            # JavaScript libraries
+│       └── anime.min.js
+├── documentation/       # Anime.js documentation and examples
+├── lib/                # Source library files
+├── src/                # Source code
+├── vercel.json         # Vercel deployment configuration
+└── package.json        # Project dependencies
+```
+
+## Features
+
+- Animated heart logo with continuous pulse effect
+- Gradient text animations
+- Interactive UI components
+- Responsive design
+- Statistics display with counting animations
+- Smooth hover effects
+
+## Technologies Used
+
+- [Anime.js](https://animejs.com/) - JavaScript animation library
+- HTML5/CSS3
+- Vercel for deployment
+
+## Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ruahaudau/animation-landing-page.git
+   cd animation-landing-page
+   ```
+
+2. Start a local server:
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+3. Visit `http://localhost:8000` in your browser
+
+## Deployment
+
+The project is configured for deployment on Vercel. The `vercel.json` file handles:
+- Static file serving from the `public` directory
+- Proper routing configuration
+- Build settings
+
+To deploy:
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel --prod`
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## Credits
 
-- Design inspired by modern web trends
-- Animation library: [anime.js](https://animejs.com/)
+- Animation library: [Anime.js](https://animejs.com/)
+- Fonts: Roobert, System fonts
+- Icons: Custom SVG implementations
