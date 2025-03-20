@@ -39,11 +39,37 @@ python -m http.server 8000
 http://localhost:8000
 ```
 
+## Deployment
+
+### Deploying to Vercel
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Login to Vercel:
+```bash
+vercel login
+```
+
+3. Deploy the project:
+```bash
+vercel
+```
+
+The project is configured to be deployed on Vercel using the following structure:
+- `public/` - Contains all static files
+- `public/index.html` - Main landing page
+- `public/lib/` - Contains the anime.js library
+- `vercel.json` - Vercel deployment configuration
+
 ## Project Structure
 
-- `index.html` - Main landing page
-- `lib/` - Contains the anime.js library
+- `public/index.html` - Main landing page
+- `public/lib/` - Contains the anime.js library
 - `README.md` - Project documentation
+- `vercel.json` - Deployment configuration
 
 ## License
 

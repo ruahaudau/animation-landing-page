@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Tool Agent</title>
+    <script src="lib/anime.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .heart-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .heart-logo svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #ff3366;
+            stroke-width: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff3366, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 3rem;
+            opacity: 0;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .example-button {
+            background: rgba(255, 51, 102, 0.1);
+            border: 1px solid rgba(255, 51, 102, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .example-button:hover {
+            background: rgba(255, 51, 102, 0.2);
+            border-color: rgba(255, 51, 102, 0.4);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .stat {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff3366;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .examples {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            Design Tool Agent
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="heart-logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+            <h1>Design Tool Agent</h1>
+            <p class="subtitle">Your AI-powered design companion</p>
+            
+            <div class="examples">
+                <div class="example-button">UI Component Generation</div>
+                <div class="example-button">Color Palette Creation</div>
+                <div class="example-button">Layout Optimization</div>
+                <div class="example-button">Design System Management</div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Designs Created</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Heart logo animation
+        anime({
+            targets: '.heart-logo svg path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 1500,
+            delay: 300,
+            loop: true,
+            direction: 'alternate'
+        });
+
+        // Title animation
+        anime({
+            targets: 'h1',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            easing: 'easeOutExpo',
+            duration: 1000,
+            delay: 500
+        });
+
+        // Subtitle animation
+        anime({
+            targets: '.subtitle',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            easing: 'easeOutExpo',
+            duration: 1000,
+            delay: 700
+        });
+
+        // Example buttons animation
+        anime({
+            targets: '.example-button',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            easing: 'easeOutExpo',
+            duration: 800,
+            delay: anime.stagger(100, {start: 1000})
+        });
+
+        // Stats animation
+        anime({
+            targets: '.stat',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            easing: 'easeOutExpo',
+            duration: 800,
+            delay: anime.stagger(100, {start: 1500})
+        });
+    </script>
+</body>
+</html> 
